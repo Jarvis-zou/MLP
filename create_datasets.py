@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-file_path = 'data/standardized_data.csv'
+file_path = 'data/onehot_data.csv'
 data = pd.read_csv(file_path)
 labels = data.iloc[:, 0]
 energy = data.iloc[:, 1:]
@@ -19,6 +19,6 @@ train_set = pd.concat([X_train, y_train], axis=1)
 validation_set = pd.concat([X_val, y_val], axis=1)
 test_set = pd.concat([X_test, y_test], axis=1)
 
-train_set.to_csv('training_data/train_set.csv', index=False)
-validation_set.to_csv('training_data/validation_set.csv', index=False)
-test_set.to_csv('training_data/test_set.csv', index=False)
+train_set.to_csv('original_data_test/train_set.csv', index=False)
+validation_set.to_csv('original_data_test/validation_set.csv', index=False)
+test_set.to_csv('original_data_test/test_set.csv', index=False)

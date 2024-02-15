@@ -23,13 +23,13 @@ train_set_path = "training_data/train_set.csv"
 validation_set_path = "training_data/validation_set.csv"
 test_set_path = "training_data/test_set.csv"
 
-train_loader = load_data(train_set_path, bz=64, shuffle=False)
-val_loader = load_data(validation_set_path, bz=64, shuffle=False)
-test_loader = load_data(test_set_path, bz=64, shuffle=False)
+train_loader = load_data(train_set_path, bz=256, shuffle=False)
+val_loader = load_data(validation_set_path, bz=256, shuffle=False)
+test_loader = load_data(test_set_path, bz=256, shuffle=False)
 
 # train
 input_size = 49
-hidden_size = 64
+hidden_size = 2048
 output_size = 5
 lr = 0.0003
 momentum = 0.95
